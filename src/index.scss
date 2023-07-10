@@ -65,4 +65,30 @@ body {
             transform: translateX(100%);
         }
     }
+
+
 }
+
+.lazy-load-image-background{
+    width: 100%;
+    height: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.opacity-layey {
+    background: linear-gradient(
+        180deg,
+        rgba(4,21,45,0) 0%,
+        #04152d 79.17%
+    );
+}
+
+.search-button{
+    background: var(--gradient);
+}
+
