@@ -10,7 +10,7 @@ import ContentWrapper from "../ContentWrapper";
 const Footer = () => {
     return (
         <footer className="footer bg-[#020c1b] pt-[50px] pb-[50px] text-white relative p-2">
-            <ContentWrapper className="flex flex-col items-center">
+            <ContentWrapper className="flex flex-col items-center mt-0 mb-0 ml-auto mr-auto pt-0 pb-0 px-2 md:px-4">
                 <ul className="menuItems list-none flex items-center justify-center gap-[15px] mb-5 md:mb-[30px] md:gap-[30px]">
                     <li className="menuItem cursor-pointer text-[12px] md:text-[16px] hover:text-[#da2f68]">Terms Of Use</li>
                     <li className="menuItem cursor-pointer text-[12px] md:text-[16px] hover:text-[#da2f68]">Privacy-Policy</li>

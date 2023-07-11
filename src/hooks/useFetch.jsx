@@ -12,12 +12,12 @@ const useFetch = (url) => {
 
         fetchDataFromApi(url)
             .then((res) => {
-                setLoading(false);
+                setLoading(res.results ? false : null);
                 setData(res);
             })
             .catch((err) => {
                 console.log(err);
-                setLoading(false);
+                setLoading("error");
                 setError("Something went wrong!");
             });
     }, [url]);

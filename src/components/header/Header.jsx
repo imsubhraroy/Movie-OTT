@@ -79,7 +79,7 @@ const Header = () => {
           mobileMenu ? "mobileView" : ""
         } ${show}`}
       >
-        <ContentWrapper>
+        <ContentWrapper className="flex justify-between items-center mt-0 mb-0 ml-auto mr-auto pt-0 pb-0 px-2 md:px-4">
           <div
             className="logo cursor-pointer"
             onClick={() => {

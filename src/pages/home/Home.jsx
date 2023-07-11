@@ -1,13 +1,15 @@
 import HeroBanner from "../../components/HeroBanner";
+import Popular from "../../components/Popular";
+import Trending from "../../components/Trending";
 
 export default function Home() {
   return (
     <>
       <div>
         <HeroBanner />
-        <div className="h-[1000px]">
-
-        </div>
+          <Trending />
+          <Popular />
+          <Popular />
       </div>
     </>
   );
