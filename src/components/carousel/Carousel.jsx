@@ -17,7 +17,7 @@ import CircleRating from "../circleRating/CircleRating";
 import Genres from "../Genres";
 import Img from "../LazyloadImage/Img";
 
-function Carousel({ data, loading }) {
+function Carousel({ data, loading, endPoint }) {
   const carouselContainer = useRef();
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
@@ -77,7 +77,7 @@ function Carousel({ data, loading }) {
                 return (
                   <div
                     className="carouselItem w-[125px] cursor-pointer md:w-[calc(20%-15px)] lg:w-[calc(20%-16px)] shrink-0"
-                    key={item.id} onClick={()=>{navigate(`/${item.media_type}/${item.id}`)}}
+                    key={item.id} onClick={()=>{navigate(`/${item.media_type || endPoint}/${item.id}`)}}
                   >
                     <div className="posterBlock relative w-full aspect-[1/1.5] bg-cover bg-center mb-[30px] flex items-end justify-between p-[10px]">
                       <Img src={posterUrl} />

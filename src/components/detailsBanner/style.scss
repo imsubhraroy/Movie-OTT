@@ -1,0 +1,72 @@
+.detailsBanner {
+  .circleRating {
+    max-width: 50px;
+    background-color: var(--black2);
+    margin-left: 5px;
+    @media only screen and (min-width: 768px) {
+      max-width: 60px;
+      margin-left: 15px;
+    }
+    .CircularProgressbar-text {
+      fill: white;
+    }
+  }
+
+  .genres {
+    margin-bottom: 10px;
+    flex-flow: row wrap;
+    padding: 15px;
+  }
+
+  .playbtn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    svg {
+      width: 45px;
+      @media only screen and (min-width: 768px) {
+        width: 55px;
+      }
+    }
+    .text {
+      font-size: 15px;
+      transition: all 0.7s ease-in-out;
+    }
+    .triangle {
+      stroke-dasharray: 240;
+      stroke-dashoffset: 480;
+      stroke: white;
+      transform: translateY(0);
+      transition: all 0.7s ease-in-out;
+    }
+    .circle {
+      stroke: white;
+      stroke-dasharray: 650;
+      stroke-dashoffset: 1300;
+      transition: all 0.5s ease-in-out;
+    }
+    &:hover {
+      .text {
+        color: var(--pink);
+      }
+      .triangle {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        stroke: var(--pink);
+        animation: trailorPlay 0.7s ease-in-out;
+      }
+      .circle {
+        stroke-dashoffset: 0;
+        stroke: var(--pink);
+      }
+    }
+  }
+
+  .info {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .infoItem {
+      flex-flow: row wrap;
+    }
+  }
+}

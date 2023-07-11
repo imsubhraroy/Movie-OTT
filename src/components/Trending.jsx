@@ -17,12 +17,12 @@ function Trending() {
     <>
       <div className="carouselSection relative mb-[70px] px-2">
         <ContentWrapper className="flex items-center justify-between mb-5 mt-0  ml-auto mr-auto pt-0 pb-0 px-1 md:px-4">
-          <span className="carouselTitle text-xl text-gray-300 font-medium md:pl-10">
+          <span className="carouselTitle text-xl md:text-2xl text-gray-100 font-medium md:pl-4">
             Trending
           </span>
           <SwitchTabs data={["Day", "Week"]} onTabChange={onTabChange} />
         </ContentWrapper>
-        <Carousel data={data?.results} loading={loading} />
+        <Carousel data={data?.results} loading={loading} endPoint={endPoint} />
       </div>
     </>
   );

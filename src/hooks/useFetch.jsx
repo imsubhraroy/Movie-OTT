@@ -12,7 +12,7 @@ const useFetch = (url) => {
 
         fetchDataFromApi(url)
             .then((res) => {
-                setLoading(res.results ? false : null);
+                setLoading(res ? false : null);
                 setData(res);
             })
             .catch((err) => {
