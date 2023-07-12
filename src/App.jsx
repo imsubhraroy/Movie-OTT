@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
 import { fetchDataFromApi } from "./utils/api";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
 import Explore from "./pages/explore/Explore";
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -62,7 +62,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
