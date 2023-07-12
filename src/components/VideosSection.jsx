@@ -23,7 +23,7 @@ const VideosSection = ({ data, loading }) => {
     return (
         <div className="videosSection relative mb-[50px]">
             <ContentWrapper>
-                <div className="sectionHeading text-base text-white mb-[25px]">Official Videos</div>
+                <div className="sectionHeading text-xl text-white mb-[25px]">Official Videos</div>
                 {loading === false ? (
                     <div className="videos flex gap-[10px] overflow-x-auto -mr-5 -ml-5 py-0 px-5 md:gap-5 md:m-0 md:p-0 ">
                         {data?.results?.map((video) => (
@@ -35,7 +35,7 @@ const VideosSection = ({ data, loading }) => {
                                     setShow(true);
                                 }}
                             >
-                                <div className="videoThumbnail mb-[15px] relative ">
+                                <div className="videoThumbnail mb-[15px] relative h-[165px] md:h-[170px]">
                                     <Img
                                         src={`https://img.youtube.com/vi/${video.key}/mqdefault.jpg`}
                                     />

@@ -112,6 +112,10 @@ const Header = () => {
                   type="text"
                   placeholder="Search..."
                   className="h-7 rounded-lg p-1 text-gray-600 left-2 outline-0 border-0"
+                  onChange={(e) => {
+                    setQuery(e.target.value);
+                  }}
+                  onKeyUp={searchQueryHandle}
                 />
               </li>
             )}

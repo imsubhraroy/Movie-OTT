@@ -27,7 +27,7 @@ function DetailsBanner({ video, crew }) {
     return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
   };
 
-  const _genre = data?.genres.map((g) => g.id);
+  const _genre = data?.genres?.map((g) => g.id);
 
   const director = crew?.filter((f) => f.known_for_department === "Directing");
   const writer = crew?.filter(

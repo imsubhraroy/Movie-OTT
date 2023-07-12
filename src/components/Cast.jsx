@@ -20,7 +20,7 @@ const Cast = ({ data, loading }) => {
     return (
         <div className="castSection relative mb-[50px]">
             <ContentWrapper>
-                <div className="sectionHeading text-[24px] text-white mb-[25px]">Top Cast</div>
+                <div className="sectionHeading text-xl text-white mb-[25px] md:pt-12">Top Cast</div>
                 {loading === false ? (
                     <div className="listItems flex gap-5 overflow-y-hidden -mr-5 -ml-5 py-0 px-5 md:m-0 md:p-0">
                         {data?.map((item) => {

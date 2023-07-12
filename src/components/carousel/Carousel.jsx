@@ -17,7 +17,7 @@ import CircleRating from "../circleRating/CircleRating";
 import Genres from "../Genres";
 import Img from "../LazyloadImage/Img";
 
-function Carousel({ data, loading, endPoint }) {
+function Carousel({ data, loading, endPoint, title }) {
   const carouselContainer = useRef();
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
@@ -53,14 +53,15 @@ function Carousel({ data, loading, endPoint }) {
     <>
       <div className="carousel mb-[50px]">
         <ContentWrapper className="relative mt-0 mb-0 ml-auto mr-auto pt-0 pb-0 px-2 md:px-4">
+          {title && <div className="caroselTitle text-xl md:text-xl text-gray-100 font-medium pb-4">{title}</div>}
           <BsFillArrowLeftCircleFill
-            className="carouselLeftNav arrow text-[30px] text-gray-100 absolute top-[44%] transform translate-y-[-50%] cursor-pointer opacity-[0.5] z-10 hidden md:block hover:opacity-[0.8] left-[30px] pt-2"
+            className="carouselLeftNav arrow text-[30px] text-[#04152d] absolute top-[44%] transform translate-y-[-50%] cursor-pointer opacity-[0.5] z-10 hidden md:block hover:opacity-[0.8] left-[30px] pt-2"
             onClick={() => {
               navigation("left");
             }}
           />
           <BsFillArrowRightCircleFill
-            className="carouselRightNav arrow text-[30px] text-gray-100 absolute top-[44%] transform translate-y-[-50%] cursor-pointer opacity-[0.5] z-10 hidden md:block hover:opacity-[0.8] right-[30px] pt-2"
+            className="carouselRightNav arrow text-[30px] text-[#04152d] absolute top-[44%] transform translate-y-[-50%] cursor-pointer opacity-[0.5] z-10 hidden md:block hover:opacity-[0.8] right-[30px] pt-2"
             onClick={() => {
               navigation("right");
             }}

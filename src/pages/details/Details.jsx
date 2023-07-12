@@ -3,6 +3,8 @@ import DetailsBanner from "../../components/detailsBanner/DetailsBanner";
 import useFetch from "../../hooks/useFetch";
 import Cast from "../../components/Cast";
 import VideosSection from "../../components/VideosSection";
+import Similar from "../../components/Similar";
+import Recomended from "../../components/Recommended";
 
 export default function Details() {
   const { mediaType, id } = useParams();
@@ -14,7 +16,9 @@ export default function Details() {
       <div>
         <DetailsBanner video={data?.results?.[0]} crew={creadit?.crew} />
         <Cast data={creadit?.cast} loading={creaditLoading} />
-        <VideosSection data={data} loading={loading} />
+        {data?.results?.length > 0 && <VideosSection data={data} loading={loading} />}
+        <Similar mediaType={mediaType} id={id} />
+        <Recomended mediaType={mediaType} id={id} />
       </div>
     </>
   );
